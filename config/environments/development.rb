@@ -33,7 +33,7 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.perform_caching = false
+  config.action_mailer.perform_caching = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -58,4 +58,7 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+config.action_mailer.default_url_options = { host: '45ad399e590d458ca787aece8c1a9bc6.vfs.cloud9.ap-northeast-1.amazonaws.com' ,protocol: 'https'} 
+config.action_mailer.delivery_method = :letter_opener_web  
 end
